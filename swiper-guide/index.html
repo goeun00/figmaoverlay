@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스와이퍼</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favi/favicon-16x16.png">
+    <link rel="stylesheet" href="css/swiper.6.8.4.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/swiper.6.8.4.js"></script>
+    <script src="js/common.js"></script>
+
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1>Swiper API v 6.8.4 guide </h1>
+            <div class="btn_mode"><span class="material-symbols-outlined middle ">
+                dark_mode
+                </span></div>
+        </header>
+        <section class="contents">
+            <div class="section_swiper">
+                <div class="swiper_heder">
+                    <div class="page_type">
+                        <span class="option_title">
+                            <span class="material-symbols-outlined icon small">filter_none</span>Page type
+                        </span>
+                        <input type="radio" name="pagetype" id="none"><label for="none">none</label>
+                        <input type="radio" name="pagetype" id="bullets" checked="checked"><label for="bullets">bullets</label>
+                        <input type="radio" name="pagetype" id="fraction"><label for="fraction">fraction</label>
+                        <input type="radio" name="pagetype" id="progressbar"><label for="progressbar">progressbar</label>
+                    </div>
+                    <div class="option_check">
+                        <span class="option_title">
+                            <span class="material-symbols-outlined icon small">tune</span>Option
+                        </span>
+                        <span class="checkbox_box box">
+                            <input type="checkbox" name="" id="arow" checked="checked"><label for="arow" title="슬라이드 방향 버튼 표시">Arow</label>
+                        </span>
+                        <span class="loop_box box">
+                            <input type="checkbox" name="" id="loop" ><label for="loop" title="슬라이드 무한 반복">Loop</label>
+                        </span>
+                        <span class="vertical_box box">
+                            <input type="checkbox" name="" id="vertical" ><label for="vertical" title="슬라이드 수평 수직 변경">Vertical</label>
+                        </span>
+                    </div>
+                    
+                </div>
+                <div class="box_swiper">
+                    <!-- 슬라이더 메인 영역 -->
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="text"><p class="type"><i>bullets</i> type</p><p class="sbject">Slide 1st</p></div>
+                            </div>
+                            <div class="swiper-slide second">
+                                <div class="text"><p class="type"><i>bullets</i> type</p><p class="sbject">Slide 2nd</p></div>
+                            </div>
+                            <div class="swiper-slide third">
+                                <div class="text"><p class="type"><i>bullets</i> type</p><p class="sbject">Slide 3rd</p></div>
+                            </div>
+                            <div class="swiper-slide fourth">
+                                <div class="text"><p class="type"><i>bullets</i> type</p><p class="sbject">Slide 4th</p></div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <!-- <div class="swiper-scrollbar"></div> -->
+                    </div>
+                </div>
+                <div class="autoplay">
+                    <span class="option_title">
+                        Auto play
+                    </span>
+                    <span class="play_box box">
+                        <input type="radio" name="autoplay" id="play" value="true" class="play-btn" checked="checked"><label for="play"><span class="material-symbols-outlined icon small fill">play_arrow </span></label>
+                    </span>
+                    <span class="stop_box box">
+                        <input type="radio" name="autoplay" id="stop" value="false" class="play-btn"><label for="stop"><span class="material-symbols-outlined icon small fill"> pause</span></label>
+                    </span>
+                    <span class="autoplay_delay"><input type="text" class="delayamount" placeholder="1000 = 1초"><input type="submit" value="done" class="delay"></span>
+                </div>
+                <div class="box_consle">
+                    <div class="code_header">
+                        <span class="option_title">
+                            <span class="material-symbols-outlined icon small">terminal</span>Console
+                        </span>
+                    </div>
+                    <diV class="console">
+                    </diV>
+             </div>
+               
+            </div>
+            <div class="box_code">
+                <div class="code_header">
+                    <span class="option_title">
+                        <span class="material-symbols-outlined icon small">code</span>Code
+                    </span>
+
+                </div>
+                <div class="code-box html">
+                    <pre class="code">
+                    </pre>
+                </div>
+                <div class="code-box js">
+                    <pre class="code">
+                    </pre>
+                </div>
+            
+            </div>
+        </section>
+    </div>
+</body>
+</html>

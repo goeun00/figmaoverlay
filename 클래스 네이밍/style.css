@@ -1,0 +1,338 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: ;
+    margin: ;
+    width: 100%;
+    height: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+/*    background: #e3e0e7;*/
+
+}
+
+#css-naming {
+    max-width: 800px;
+    margin:  auto;
+    margin-top: 16px;
+}
+
+a {
+    font-style: normal;
+    text-decoration: none;
+    color: #1e1e1e
+}
+
+
+p {
+    margin: ;
+    line-height: 1;
+}
+
+ul {
+    padding: ;
+    margin: ;
+
+}
+
+li {
+    list-style: none;
+}
+
+
+.alert {
+    background: rgba(57, 57, 64, .85);
+    color: #fff;
+    display: inline-block;
+    line-height: 1;
+    padding: 8px 16px;
+    font-size: .75em;
+    border-radius: 25px;
+    text-transform: capitalize;
+    position: absolute;
+    box-shadow: 2px 2px 4px rgba(0, , , .1)
+}
+
+.clb::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+#css-naming {
+    font-size: 15px;
+}
+#css-naming h2{
+    letter-spacing: -0.05em;
+        color: #43434a;
+    padding: 8px 16px;
+    margin: ;
+    background: rgba(255, 255, 255, .35);
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+#css-naming h2  .material-symbols-sharp{
+    color:red;
+    vertical-align: middle;
+}
+#css-naming h3 {
+    text-transform: capitalize;
+    padding: ;
+    margin-bottom: 16px;
+    margin-top: ;
+    text-align: left;
+    font-size: 1em;
+    font-weight: 500;
+    color: #43434a;
+    letter-spacing: -0.02em;
+ 
+    
+}
+#css-naming h3 .material-symbols-sharp{
+    font-size: 1em;
+    vertical-align: -1.3px;
+    color:#474d93
+
+}
+
+.naming-list{
+        background: #fff;
+        border-radius: 5px;
+}
+
+
+.naming-list > li {
+    width: 33.3%;
+
+    padding: 16px;
+    float: left;
+
+}
+
+.naming-list > li:last-child {
+    margin-right: ;
+}
+
+.naming-list li li {
+    float: left;
+    margin: 4px;
+    border-radius: 25px;
+    background: #eee;
+    line-height: 1;
+    font-size: .8em;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    transition: .2s;
+}
+
+.naming-list li li input[type="text"] {
+    background: #fffefe;
+    border: 3px solid #d8d8d8;
+    padding: 8px;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    width: 100%;
+    transition: .2s;
+}
+
+.naming-list li li input[type="text"]:focus {
+    outline: inherit;
+    border: 3px solid #525d8e;
+}
+
+
+/*네이밍 요소 별 색상 설정*/
+.naming-list li:nth-child(1) li {
+    background: rgba(195, 72, 75, .15);
+    border: 1px solid rgba(195, 72, 75, .25)
+}
+
+.naming-list li:nth-child(1) li.on {
+    background: rgba(195, 72, 75, 1);
+}
+
+.naming-list li:nth-child(1) li a,
+.name-calculation p:nth-child(1) sup,
+.naming-list li:nth-child(1) li input[type="text"] {
+    color: rgb(195, 72, 75);
+}
+
+.naming-list li:nth-child(1) li input[type="text"]:focus {
+    border: 3px solid rgba(195, 72, 75, .5);
+}
+
+.naming-list li:nth-child(2) li {
+    background: rgba(87, 119, 161, .15);
+    border: 1px solid rgba(87, 119, 161, .25)
+}
+
+.naming-list li:nth-child(2) li.on {
+    background: rgba(87, 119, 161, 1);
+}
+
+
+.naming-list li:nth-child(2) li a,
+.name-calculation p:nth-child(2) sup,
+.naming-list li:nth-child(2) li input[type="text"] {
+    color: rgb(87, 119, 161);
+}
+
+.naming-list li:nth-child(2) li input[type="text"]:focus {
+    border: 3px solid rgba(87, 119, 161, .5);
+}
+
+.naming-list li:nth-child(3) li {
+    background: rgba(93, 151, 154, .15);
+    border: 1px solid rgba(93, 151, 154, .25)
+}
+
+.naming-list li:nth-child(3) li.on {
+    background: rgba(93, 151, 154, 1);
+}
+
+.naming-list li:nth-child(3) li a,
+.name-calculation p:nth-child(3) sup,
+.naming-list li:nth-child(3) li input[type="text"] {
+    color: rgb(93, 151, 154);
+}
+
+.naming-list li:nth-child(3) li input[type="text"]:focus {
+    border: 3px solid rgba(93, 151, 154, .5);
+}
+
+.naming-list li li.on a {
+    color: #fff;
+}
+
+
+/*네이밍 사이 하이픈*/
+.name-calculation p:nth-child(2) span::before {
+    content: "__ "
+}
+
+.name-calculation p:nth-child(3) span::before {
+    content: "-- "
+}
+
+.name-calculation p span::before {
+    opacity: .35;
+    padding-right: 8px;
+}
+
+.name-calculation p span.disabled::before {
+    content: "";
+}
+
+.naming-list li li a {
+    display: inline-block;
+    padding: 4px 10px;
+    font-weight: 500;
+}
+
+.naming-list li li:first-child {
+    float: none;
+    background: none;
+    padding: ;
+    border: px
+}
+
+
+
+
+/*네이밍 산출물*/
+
+.calculation-box {
+    padding: 16px;
+    background: #fff;
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+
+.calculation-box.on {
+
+}
+
+
+.calculation-box .alert{
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    white-space: nowrap;
+    transition: .25s ease-in-out;
+    opacity: ;
+    
+}
+
+
+.calculation-box.on .alert{
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 1;
+    
+}
+.name-calculation {
+    line-height: 1;
+    display: inline-block;
+    bottom: ;
+    padding-top: 8px;
+
+}
+
+
+.name-calculation p {
+    font-size: 1.2em;
+    margin-left: 16px;
+    float: left;
+    display: inline-block;
+
+}
+
+.name-calculation p:first-child {
+    margin: ;
+}
+
+.name-calculation p span {
+    color: #43434a
+}
+
+.name-calculation a {
+    display: inline-block;
+    font-size: .8em;
+    vertical-align: middle;
+    color: #a0a0a0;
+    position: absolute;
+    right: 16px;
+    opacity: ;
+    top: 16px;
+    transition: .2s;
+}
+
+.calculation-box:hover a#copy {
+    opacity: 1;
+
+}
+
+.name-calculation p sup {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 9px;
+    font-weight: 600;
+
+}
+
+#calculation-copybox {
+    position: absolute;
+    opacity: ;
+    display: block;
+
+}
