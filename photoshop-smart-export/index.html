@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smart Export</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="field" id="folder-section">
+        <div class="field-label">
+          <label for="folder">저장 폴더</label>
+        </div>
+        <div class="folder-row">
+          <sp-textfield id="folder" placeholder="폴더 이름 또는 내보낼 위치"></sp-textfield>
+          <sp-button id="open-folder" variant="cta" title="저장 폴더 열기 또는 선택">
+            <span class="text icon-label"><svg class="ui-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3.5 7.5a2 2 0 0 1 2-2h4.2l1.8 2h7a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/><path d="M3.5 10h17"/></svg><span>Folder</span></span>
+          </sp-button>
+        </div>
+      </section>
+
+      <section class="naming" aria-label="파일 이름 설정">
+        <sp-checkbox id="use-layer-name" checked>레이어 / 그룹명 사용</sp-checkbox>
+        <div class="prefix-field" id="prefix-field" hidden>
+          <label for="prefix">접두사</label>
+          <sp-textfield id="prefix" value="img"></sp-textfield>
+        </div>
+      </section>
+
+      <section class="preview" aria-label="선택 항목 미리보기">
+        <sp-divider size="medium"></sp-divider>
+        <div id="preview-toggle" class="preview-toggle" role="button" tabindex="0" aria-expanded="false">
+          <span class="preview-title">선택 항목<span id="preview-count" class="hint">0개</span></span>
+          <svg id="preview-arrow" class="preview-chevron" viewBox="0 0 24 24" focusable="false"><path d="m6 9 6 6 6-6" /></svg>
+        </div>
+        <div id="preview-list" class="preview-list" hidden></div>
+        <sp-divider size="medium"></sp-divider>
+      </section>
+
+      <div class="quality-option" aria-label="JPG 품질 설정">
+        <span class="quality-label">JPG 품질</span>
+        <sp-radio-group id="jpg-quality" aria-label="JPG 품질">
+          <sp-radio value="100">100%</sp-radio>
+          <sp-radio value="80" checked>80%</sp-radio>
+          <sp-radio value="70">70%</sp-radio>
+        </sp-radio-group>
+      </div>
+
+      <div class="quality-option" aria-label="PNG 형식 설정">
+        <span class="quality-label">PNG 형식</span>
+        <sp-radio-group id="png-depth" aria-label="PNG 형식">
+          <sp-radio value="8">PNG-8</sp-radio>
+          <sp-radio value="24" checked>PNG-24</sp-radio>
+        </sp-radio-group>
+      </div>
+
+      <div class="actions" aria-label="이미지 내보내기">
+        <div class="action-cell">
+          <sp-button class="export-btn" variant="secondary" data-format="jpg" aria-disabled="false">
+            <span class="text icon-label"><svg class="ui-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><circle cx="8.5" cy="9" r="1.4"/><path d="M5.5 16.5l4.2-4.2 3 2.8 2.3-2.3 3.5 3.7"/></svg><span>JPG 내보내기</span></span>
+          </sp-button>
+        </div>
+        <div class="action-cell">
+          <sp-button class="export-btn" variant="secondary" data-format="png" aria-disabled="false">
+            <span class="text icon-label"><svg class="ui-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="7" width="11" height="11" rx="1.8"/><path d="M9 3.5h9.5a2 2 0 0 1 2 2V15"/><path d="M3.5 9V18.5a2 2 0 0 0 2 2H15"/><path d="M7.5 15l2.7-2.7 1.8 1.7 1.8-1.8 2.2 2.8"/></svg><span>PNG 내보내기</span></span>
+          </sp-button>
+        </div>
+      </div>
+
+      <div class="feedback" id="feedback" role="status" aria-live="polite">
+        <span id="status"></span>
+        <div class="result" id="log" hidden><div id="details" hidden></div></div>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>

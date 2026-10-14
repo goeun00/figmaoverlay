@@ -1,0 +1,321 @@
+/* Smart Export — native Spectrum controls + hand-editable SVG icons. */
+:root {
+  --ui-text: #e5e5e5;
+  --ui-muted: #a7a7a7;
+  --ui-border: #ffffff33;
+  --ui-positive: #a5d9b9;
+  --ui-negative: #ffaaa2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--ui-text);
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.app {
+  width: 100%;
+  min-width: 0;
+  padding: 14px 14px 18px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.field {
+  width: 100%;
+  min-width: 0;
+  margin-bottom: 8px;
+}
+
+.field-label {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.field-label label {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hint {
+  margin-left: 9px;
+  color: var(--ui-muted);
+  font-size: 11px;
+}
+
+sp-checkbox,
+sp-button {
+  cursor: pointer;
+}
+
+sp-button {
+  line-height: 14px;
+  font-size: 0;
+}
+
+sp-button .text {
+  font-size: 11px;
+  text-align: center;
+}
+
+.folder-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+}
+
+#folder {
+  display: block;
+  flex: 1 1 0%;
+  width: 1px;
+  min-width: 0;
+  margin-right: 8px;
+}
+
+#open-folder {
+  line-height: 14px;
+}
+
+.preview-chevron {
+  display: block;
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+}
+
+.naming {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  margin-bottom: 8px;
+}
+
+#use-layer-name {
+  flex: 0 0 auto;
+  font-size: 11px;
+  line-height: 18px;
+}
+
+.prefix-field {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 130px;
+}
+
+.prefix-field label {
+  flex: 0 0 auto;
+  margin-right: 8px;
+  color: var(--ui-muted);
+  font-size: 11px;
+}
+
+#prefix {
+  display: block;
+  flex: 0 0 92px;
+  width: 92px;
+  min-width: 0;
+}
+
+.preview {
+  width: 100%;
+  min-width: 0;
+  margin-bottom: 8px;
+}
+
+.preview-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 36px;
+  cursor: pointer;
+}
+
+
+.preview-chevron {
+  flex: 0 0 auto;
+  margin-left: 8px;
+  color: var(--ui-muted);
+}
+
+.preview-toggle[aria-expanded="true"] .preview-chevron {
+  transform: rotate(180deg);
+}
+
+.preview-list {
+  max-height: 130px;
+  overflow-y: auto;
+  padding: 5px 10px 8px;
+  border-top: 1px solid var(--ui-border);
+}
+
+.preview-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 29px;
+  padding: 5px 0;
+  border-bottom: 1px solid #454545;
+}
+
+.preview-row:last-child {
+  border-bottom: 0;
+}
+
+.preview-source,
+.preview-target {
+  display: block;
+  flex: 1 1 0%;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 10.5px;
+}
+
+.preview-source {
+  margin-right: 10px;
+  color: var(--ui-muted);
+}
+
+.preview-target {
+  color: var(--ui-text);
+  text-align: right;
+}
+
+.preview-empty {
+  padding: 9px 0;
+  color: var(--ui-muted);
+  font-size: 11px;
+}
+
+.actions {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  min-width: 0;
+}
+
+.action-cell {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.action-cell+.action-cell {
+  margin-left: 8px;
+}
+
+.export-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+
+.feedback {
+  width: 100%;
+  min-width: 0;
+  margin-top: 9px;
+  color: var(--ui-muted);
+  font-size: 11px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.feedback.ok {
+  color: var(--ui-positive);
+}
+
+.feedback.error {
+  color: var(--ui-negative);
+}
+
+#status:empty {
+  display: none;
+}
+
+.result {
+  margin-top: 5px;
+}
+
+#details {
+  max-height: 90px;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 10px;
+}
+/* Align JPEG quality with the naming and export controls. */
+.quality-option {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  min-height: 36px;
+  margin: 0 0 8px;
+}
+.quality-label {
+  margin-right: 14px;
+  color: var(--ui-text);
+  font-size: 12px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+#jpg-quality {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+}
+#jpg-quality sp-radio {
+  margin-right: 14px;
+  font-size: 12px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+#jpg-quality sp-radio:last-child {
+  margin-right: 0;
+}
+
+/* PNG/JPG quality controls: equal type and spacing. */
+#png-depth {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+}
+#png-depth sp-radio {
+  margin-right: 14px;
+  font-size: 12px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+#png-depth sp-radio:last-child { margin-right: 0; }
+
+/* Custom SVG icons, inline with native Spectrum button labels. */
+.icon-label { display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; vertical-align: middle; }
+.icon-label .ui-svg { display: inline-block; flex: 0 0 14px; width: 14px; height: 14px; margin-right: 6px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; vertical-align: middle; }
+#open-folder .ui-svg { width: 16px; height: 16px; flex-basis: 16px; }
